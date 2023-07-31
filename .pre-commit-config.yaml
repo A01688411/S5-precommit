@@ -11,3 +11,22 @@ repos:
   hooks:
   - id: flake8
     args: [--ignore=E501]
+
+- repo: https://github.com/pycqa/isort
+  rev: 5.12.0 # Specify isort version
+  hooks:
+    - id: isort
+      name: isort (python)
+      args: [--filter-files]
+
+- repo: https://github.com/pycqa/pylint
+  rev: 2.17.5 # Specify with the desired version of pylint
+  hooks:
+    - id: pylint
+      name: pylint
+      args: [--disable=all, --enable=W0614]
+
+- repo: https://github.com/PyCQA/autoflake
+  rev:  2.2.0
+  hooks:
+    - id: autoflake
